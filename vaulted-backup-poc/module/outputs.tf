@@ -5,5 +5,5 @@ output "vault_name" {
 
 output "vault_principal_id" {
   description = "The principal id of the system managed identity for the Recovery Services Vault."
-  value       = azurerm_recovery_services_vault.this.identity.principal_id
+  value       = azurerm_recovery_services_vault.this.identity[0].principal_id
 }
