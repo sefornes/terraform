@@ -20,7 +20,7 @@ resource "azurerm_recovery_services_vault" "this" {
 }
 
 resource "azurerm_role_assignment" "this" {
-  principal_id         = azurerm_recovery_services_vault.this.identity
+  principal_id         = azurerm_recovery_services_vault.this.identity.principal_id
   scope                = data.azurerm_storage_account.this.id
   role_definition_name = "Backup Contributor"
 }
